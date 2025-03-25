@@ -13,7 +13,7 @@ flex(col, sat, code = "hex", palette = flexoki)
 
 \item{code}{A character string specifying the form of color code (default = \code{"hex"}).}
 
-\item{palette}{Name of the chosen color palette; \code{flexoki} is the only option.}
+\item{palette}{Name of the chosen color palette; \code{"flexoki"} is the only option.}
 }
 \value{
 A vector with one or more color codes.
@@ -22,7 +22,11 @@ A vector with one or more color codes.
 Select one or more colors from the Flexoki palette.
 }
 \details{
-Additional details...
+Base options. There are several options for base colors using the \code{col} argument, including \code{"paper"} (off-white), \code{"black"}, and \code{"base"}, which is offered in several levels of saturation (see below).
+
+Color options. There are several options for other colors using the \code{col} argument, including \code{"red"}, \code{"orange"}, \code{"yellow"}, \code{"green"}, \code{"cyan"}, \code{"blue"}, \code{"purple"}, and \code{"magenta"}, each offered in several levels of saturation (see below).
+
+Saturation. The level of saturation is given by integer values in the following range, ordered from lightest to darkest: \code{c(50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 850, 900, 950)}.
 }
 \examples{
 flex(c("blue", "red"), c(100))
