@@ -3,11 +3,14 @@
 #' @param col A character string specifying one or more hues of colors. See `Details` for options.
 #' @param sat A number specifying the saturation. `NA` is allowed when `col = "paper"` or `col = "base"`.
 #' @param code A character string specifying the form of color code (default = `"hex"`).
-#' @param palette Name of the chosen color palette; `flexoki` is the only option.
+#' @param palette Name of the chosen color palette; `"flexoki"` is the only option.
 #'
 #' @details
-#' Additional details...
+#' Base options. There are several options for base colors using the `col` argument, including `"paper"` (off-white), `"black"`, and `"base"`, which is offered in several levels of saturation (see below).
 #' 
+#' Color options. There are several options for other colors using the `col` argument, including `"red"`, `"orange"`, `"yellow"`, `"green"`, `"cyan"`, `"blue"`, `"purple"`, and `"magenta"`, each offered in several levels of saturation (see below).
+#' 
+#' Saturation. The level of saturation is given by integer values in the following range, ordered from lightest to darkest: `c(50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 850, 900, 950)`.
 #'
 #' @returns A vector with one or more color codes.
 #' @export
