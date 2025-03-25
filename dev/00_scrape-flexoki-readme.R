@@ -60,5 +60,5 @@ tmp[, c("red", "green", "blue")] <- tmp[, c("red", "green", "blue")] |>
   lapply(as.integer)
 
 ## store color data in package
-flex_colors <- tmp
-usethis::use_data(flex_colors, internal = TRUE, overwrite = TRUE)
+flexoki <- tmp
+usethis::use_data(flexoki, internal = TRUE, overwrite = TRUE)
