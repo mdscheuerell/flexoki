@@ -1,0 +1,9 @@
+pandoc: '3.2'
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  example-usage: example-usage.html
+last_built: 2025-03-26T22:57Z
+urls:
+  reference: https://github.com/mdscheuerell/flexoki/reference
+  article: https://github.com/mdscheuerell/flexoki/articles
