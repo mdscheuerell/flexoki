@@ -39,22 +39,14 @@ The function will work with vector arguments for \code{col} and \code{sat}. If t
 \examples{
 ## two different colors with same saturation levels
 #> flex(c("blue", "red"), 100)
-#> [1] "#C6DDE8" "#FFCABB"
 
 ## two different colors with same saturation levels in RGB
 flex(c("blue", "red"), 100, code = "rgb")
-#>   A tibble: 2 × 3
-#>     red green  blue
-#>   <int> <int> <int>
-#> 1   198   221   232
-#> 2   255   202   187
 
 ## gray with different saturation levels
 flex("gray", c(100, 200))
-#> [1] "#E6E4D9" "#CECDC3"
 
 ## three colors with specific saturation levels
 flex(c("blue", "red", "green"), c(100, 200, 300))
-#> [1] "#C6DDE8" "#F89A8A" "#A0AF54"
 
 }
