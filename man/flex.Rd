@@ -7,29 +7,54 @@
 flex(col, sat, code = "hex", palette = flexoki)
 }
 \arguments{
-\item{col}{A character string specifying one or more hues of colors. See \code{Details} for options.}
+\item{col}{Character string specifying one or more hues of colors (see Details).}
 
-\item{sat}{A number specifying the saturation. \code{NA} is allowed when \code{col = "paper"} or \code{col = "base"}.}
+\item{sat}{Number specifying the saturation level. If \code{col = "paper"} or \code{col = "black"} this defaults to \code{sat = NA} (see Details).}
 
-\item{code}{A character string specifying the form of color code (default = \code{"hex"}).}
+\item{code}{Character string specifying the form of color code (default = \code{"hex"}).}
 
-\item{palette}{Name of the chosen color palette; \code{"flexoki"} is the only option.}
+\item{palette}{Name of the chosen color palette; \code{flexoki} is the only option at this time.}
 }
 \value{
-A vector with one or more color codes.
+For \code{code = "hex"}, a scalar (or vector) of one (or more) hexadecimal color code(s).
+
+For \code{code = "rgb"}, a tibble with columns \code{c("red", "green", "blue")}
 }
 \description{
 Select one or more colors from the Flexoki palette.
 }
 \details{
-Base options. There are several options for base colors using the \code{col} argument, including \code{"paper"} (off-white), \code{"black"}, and \code{"base"}, which is offered in several levels of saturation (see below).
+There are three different options for monochromatic base hues: off-white (\code{col = "paper"}), black (\code{col = "black"}), and a 12-level gray-scale (\code{col = "gray"}).
 
-Color options. There are several options for other colors using the \code{col} argument, including \code{"red"}, \code{"orange"}, \code{"yellow"}, \code{"green"}, \code{"cyan"}, \code{"blue"}, \code{"purple"}, and \code{"magenta"}, each offered in several levels of saturation (see below).
+There are several options for accent colors, each specified using the \code{col} argument and offered in 12 increasing levels of saturation. The color options are:
 
-Saturation. The level of saturation is given by integer values in the following range, ordered from lightest to darkest: \code{c(50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 850, 900, 950)}.
+\code{c("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")}
+
+The level of saturation is denoted by an integer from the following set, ordered from lightest to darkest:
+
+\code{c(50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 850, 900, 950)}.
+
+The function will work with vector arguments for \code{col} and \code{sat}. If the vectors are the same length, the function assumes a 1:1 correspondence between a specified color and the saturation, such that \code{col = c("red", "blue")} and \code{sat = c(100, 200)} would yield the hexadecimal equivalent of \code{"red-100"} (\verb{#FFCABB}) and \code{"blue-200"} (\verb{#92BFDB}). If one of the arguments is a vector and the other is a scalar, the shorter argument is recycled (see examples).
 }
 \examples{
-flex(c("blue", "red"), c(100))
-flex(c("blue"), c(100, 200))
-flex(c("blue", "red", "green"), c(100, 200, 100))
+## two different colors with same saturation levels
+flex(c("blue", "red"), 100)
+[1] "#C6DDE8" "#FFCABB"
+
+## two different colors with same saturation levels in RGB
+flex(c("blue", "red"), 100, code = "rgb")
+# A tibble: 2 × 3
+    red green  blue
+  <int> <int> <int>
+1   198   221   232
+2   255   202   187
+
+## gray with different saturation levels
+flex("gray", c(100, 200))
+[1] "#E6E4D9" "#CECDC3"
+
+## three colors with specific saturation levels
+flex(c("blue", "red", "green"), c(100, 200, 300))
+[1] "#C6DDE8" "#F89A8A" "#A0AF54"
+
 }
