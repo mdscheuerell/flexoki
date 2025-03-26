@@ -20,17 +20,27 @@ library(ggplot2)
 ```
 
 ```{r}
+#| fig.alt: >
+#|   Barplot of the number of cars in the {mtcars} data set that have 4 cylinders (11 cars), 6 cylinders (7 cars), and 8 cylinders (14 cars). The 3 bars are colored left to right as cyan, red, and blue; each bar has increasing saturation from left to right.
 ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
   geom_bar( ) +
   scale_fill_manual(values = flex(c("cyan", "red", "blue"),
                                   c(200, 400, 600)) ) +
   theme(legend.position = "none")
+```
 
+```{r}
+#| fig.alt: >
+#|   Barplot of the number of cars in the {mtcars} data set that have 4 cylinders (11 cars), 6 cylinders (7 cars), and 8 cylinders (14 cars). The 3 bars are colored left to right as cyan, red, and blue; each bar has the same saturation.
 ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
   geom_bar( ) +
   scale_fill_manual(values = flex(c("cyan", "red", "blue"), 500) ) +
   theme(legend.position = "none")
+```
 
+```{r}
+#| fig.alt: >
+#|   Barplot of the number of cars in the {mtcars} data set that have 4 cylinders (11 cars), 6 cylinders (7 cars), and 8 cylinders (14 cars). The 3 bars are colored purple and each bar has increasing saturation from left to right.
 ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
   geom_bar( ) +
   scale_fill_manual(values = flex("purple", c(200, 400, 600)) ) +
