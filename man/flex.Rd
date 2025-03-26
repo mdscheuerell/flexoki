@@ -24,7 +24,7 @@ For \code{code = "rgb"}, a tibble with columns \code{c("red", "green", "blue")}
 Select one or more colors from the Flexoki palette.
 }
 \details{
-There are three different options for monochromatic base hues: off-white (\code{col = "paper"}), black (\code{col = "black"}), and a 12-level gray-scale (\code{col = "gray"}).
+There are three different options for monochromatic base hues: off-white (\code{col = "paper"}), black (\code{col = "black"}), and a 12-level gray-scale (\code{col = "gray"} or \code{col = "base"}).
 
 There are several options for accent colors, each specified using the \code{col} argument and offered in 12 increasing levels of saturation. The color options are:
 

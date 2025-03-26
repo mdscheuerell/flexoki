@@ -9,7 +9,7 @@
 #' @param palette Name of the chosen color palette; `flexoki` is the only option at this time.
 #'
 #' @details
-#' There are three different options for monochromatic base hues: off-white (`col = "paper"`), black (`col = "black"`), and a 12-level gray-scale (`col = "gray"`).
+#' There are three different options for monochromatic base hues: off-white (`col = "paper"`), black (`col = "black"`), and a 12-level gray-scale (`col = "gray"` or `col = "base"`).
 #' 
 #' There are several options for accent colors, each specified using the `col` argument and offered in 12 increasing levels of saturation. The color options are:
 #' 
@@ -52,7 +52,7 @@
 flex <- function(col, sat = NULL, code = "hex", palette = flexoki) {
   
   ## possible values
-  col_set <- c("paper", "base", "black",
+  col_set <- c("paper", "base", "gray", "black",
                "red", "orange", "yellow", "green",
                "cyan", "blue", "purple", "magenta")
   
