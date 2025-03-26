@@ -18,3 +18,5 @@ Suggests:
     rmarkdown,
     ggplot2
 VignetteBuilder: knitr
+URL: https://github.com/mdscheuerell/flexoki
+BugReports: https://github.com/mdscheuerell/flexoki/issues
