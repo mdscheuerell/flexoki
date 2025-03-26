@@ -104,7 +104,7 @@ flex <- function(col, sat, code = "hex", palette = flexoki) {
       dplyr::select(hex) |>
       unlist() |>
       unname()
-  ## if RGB  
+    ## if RGB  
   } else {
     pal <- pal |>
       dplyr::arrange(match(color, col), match(saturation, sat)) |>
