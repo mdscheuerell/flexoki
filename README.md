@@ -30,7 +30,7 @@ pak::pak("mdscheuerell/flexoki")
 #> + cli                     3.6.2      
 #> + dplyr                   1.1.4      
 #> + fansi                   1.0.6      
-#> + flexoki    0.0.0.9000 → 0.0.0.9000 👷🏽🔧 ⬇ (GitHub: 8c8a4dc)
+#> + flexoki    0.0.0.9000 → 0.0.0.9000 👷🏼🔧 ⬇ (GitHub: 85526dd)
 #> + generics                0.1.3      
 #> + glue                    1.6.2      
 #> + lifecycle               1.0.4      
@@ -45,30 +45,33 @@ pak::pak("mdscheuerell/flexoki")
 #> + vctrs                   0.6.5      
 #> + withr                   2.5.2
 #> ℹ Getting 1 pkg with unknown size, 16 (9.66 MB) cached
-#> ✔ Cached copy of flexoki 0.0.0.9000 (source) is the latest build
-#> ✔ Got withr 2.5.2 (x86_64-apple-darwin17.0) (229.07 kB)
 #> ✔ Got vctrs 0.6.5 (x86_64-apple-darwin17.0) (1.85 MB)
-#> ✔ Installed flexoki 0.0.0.9000 (github::mdscheuerell/flexoki@8c8a4dc) (454ms)
-#> ✔ Installed R6 2.5.1  (454ms)
-#> ✔ Installed cli 3.6.2  (457ms)
-#> ✔ Installed dplyr 1.1.4  (484ms)
-#> ✔ Installed fansi 1.0.6  (480ms)
-#> ✔ Installed generics 0.1.3  (476ms)
-#> ✔ Installed glue 1.6.2  (472ms)
-#> ✔ Installed lifecycle 1.0.4  (470ms)
-#> ✔ Installed magrittr 2.0.3  (466ms)
-#> ✔ Installed pillar 1.9.0  (461ms)
-#> ✔ Installed pkgconfig 2.0.3  (454ms)
-#> ✔ Installed rlang 1.1.2  (447ms)
-#> ✔ Installed tibble 3.2.1  (442ms)
-#> ✔ Installed tidyselect 1.2.0  (434ms)
-#> ✔ Installed utf8 1.2.4  (451ms)
-#> ✔ Installed vctrs 0.6.5  (477ms)
-#> ✔ Installed withr 2.5.2  (42ms)
-#> ✔ 1 pkg + 16 deps: upd 1, added 16, dld 2 (2.08 MB) [6.9s]
+#> ✔ Got flexoki 0.0.0.9000 (source) (1.28 MB)
+#> ✔ Installed R6 2.5.1  (449ms)
+#> ✔ Installed cli 3.6.2  (446ms)
+#> ✔ Installed dplyr 1.1.4  (449ms)
+#> ✔ Installed fansi 1.0.6  (443ms)
+#> ✔ Installed generics 0.1.3  (466ms)
+#> ✔ Installed glue 1.6.2  (462ms)
+#> ✔ Installed lifecycle 1.0.4  (457ms)
+#> ✔ Installed magrittr 2.0.3  (452ms)
+#> ✔ Installed pillar 1.9.0  (448ms)
+#> ✔ Installed pkgconfig 2.0.3  (441ms)
+#> ✔ Installed rlang 1.1.2  (436ms)
+#> ✔ Installed tibble 3.2.1  (430ms)
+#> ✔ Installed tidyselect 1.2.0  (424ms)
+#> ✔ Installed utf8 1.2.4  (417ms)
+#> ✔ Installed vctrs 0.6.5  (482ms)
+#> ✔ Installed withr 2.5.2  (605ms)
+#> ℹ Packaging flexoki 0.0.0.9000
+#> ✔ Packaged flexoki 0.0.0.9000 (427ms)
+#> ℹ Building flexoki 0.0.0.9000
+#> ✔ Built flexoki 0.0.0.9000 (864ms)
+#> ✔ Installed flexoki 0.0.0.9000 (github::mdscheuerell/flexoki@85526dd) (25ms)
+#> ✔ 1 pkg + 16 deps: upd 1, added 16, dld 2 (NA B) [9.4s]
 ```
 
-## Example
+## Examples
 
 flexoki is designed to work with scalar or vector inputs and can provide
 color codes in either hexadecimal (default) or RGB formats.
@@ -96,3 +99,26 @@ flex("gray", c(100, 200))
 flex(c("blue", "red", "green"), c(100, 200, 300))
 #> [1] "#C6DDE8" "#F89A8A" "#A0AF54"
 ```
+
+## Color options
+
+flexoki offers the following options for colors:
+
+- an off-white background (ie, “paper”)
+
+- black
+
+- 12-level gray-scale
+
+- 12-level scale for 8 different hues
+
+The following graphic comes courtesy of [Steph Ango’s
+website](https://stephango.com/flexoki) and is available
+[here](https://github.com/kepano/flexoki/blob/main/_images/flexoki-palette.png).
+
+<figure>
+<img src="dev/flexoki-palette.png"
+alt="“Colors/hues available in the flexoki package." />
+<figcaption aria-hidden="true">“Colors/hues available in the flexoki
+package.</figcaption>
+</figure>

@@ -28,7 +28,7 @@ You can install the development version of flexoki from [GitHub](https://github.
 pak::pak("mdscheuerell/flexoki")
 ```
 
-## Example
+## Examples
 
 flexoki is designed to work with scalar or vector inputs and can provide color codes in either hexadecimal (default) or RGB formats.
 
@@ -47,4 +47,20 @@ flex("gray", c(100, 200))
 ## three colors with specific saturation levels
 flex(c("blue", "red", "green"), c(100, 200, 300))
 ```
+
+## Color options
+
+flexoki offers the following options for colors:
+
+* an off-white background (ie, "paper")
+
+* black
+
+* 12-level gray-scale
+
+* 12-level scale for 8 different hues
+
+The following graphic comes courtesy of [Steph Ango's website](https://stephango.com/flexoki) and is available [here](https://github.com/kepano/flexoki/blob/main/_images/flexoki-palette.png).
+
+!["Colors/hues available in the flexoki package.](dev/flexoki-palette.png)
 
