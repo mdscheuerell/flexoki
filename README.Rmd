@@ -23,14 +23,38 @@ This is a color palette for R based on Steph Ango's "inky color scheme" [flexoki
 
 You can install the development version of flexoki from [GitHub](https://github.com/) with:
 
-```{r}
+```{r, message = FALSE}
 # install.packages("pak")
 pak::pak("mdscheuerell/flexoki")
 ```
 
-## Examples
+## Color options
 
-flexoki is designed to work with scalar or vector inputs and can provide color codes in either hexadecimal (default) or RGB formats.
+flexoki offers the following options for colors:
+
+- an off-white “paper” background (`#FFFCF0`)
+
+- black (`#100F0F`)
+
+* 12-level gray-scale
+
+* 12-levels of saturation for 8 different hues
+
+The following image shows the different hues and levels of saturation available in flexoki.^[Graphic courtesy of [Steph Ango's website](https://stephango.com/flexoki) and available [here](https://github.com/kepano/flexoki/blob/main/_images/flexoki-palette.png).] See [Examples](#examples) below for information on how to use flexoki.
+
+![Colors/hues available in the flexoki package.](dev/flexoki-palette.png)
+
+<br>
+
+## Examples {#examples}
+
+At present there is only one function in flexoki: `flex()`.
+
+```{r flex_form, eval = FALSE}
+flex(col, sat = NULL, code = "hex", palette = flexoki)
+```
+
+`flex()` is designed to work with scalar or vector inputs and can provide color codes in either hexadecimal (default) or RGB formats. 
 
 ```{r example}
 library(flexoki)
@@ -42,25 +66,9 @@ flex(c("blue", "red"), 100)
 flex(c("blue", "red"), 100, code = "rgb")
 
 ## gray with different saturation levels
-flex("gray", c(100, 200))
+flex("gray", c(100, 200)) # same as flex("base", c(100, 200))
 
 ## three colors with specific saturation levels
 flex(c("blue", "red", "green"), c(100, 200, 300))
 ```
-
-## Color options
-
-flexoki offers the following options for colors:
-
-* an off-white background (ie, "paper")
-
-* black
-
-* 12-level gray-scale
-
-* 12-level scale for 8 different hues
-
-The following graphic comes courtesy of [Steph Ango's website](https://stephango.com/flexoki) and is available [here](https://github.com/kepano/flexoki/blob/main/_images/flexoki-palette.png).
-
-!["Colors/hues available in the flexoki package.](dev/flexoki-palette.png)
 
