@@ -39,7 +39,7 @@ available in flexoki.[^1] See [Examples](#examples) below for
 information on how to use flexoki.
 
 <figure>
-<img src="dev/flexoki-palette.png"
+<img src="man/figures/flexoki-palette.png"
 alt="Colors/hues available in the flexoki package." />
 <figcaption aria-hidden="true">Colors/hues available in the flexoki
 package.</figcaption>

@@ -42,7 +42,7 @@ flexoki offers the following options for colors:
 
 The following image shows the different hues and levels of saturation available in flexoki.^[Graphic courtesy of [Steph Ango's website](https://stephango.com/flexoki) and available [here](https://github.com/kepano/flexoki/blob/main/_images/flexoki-palette.png).] See [Examples](#examples) below for information on how to use flexoki.
 
-![Colors/hues available in the flexoki package.](dev/flexoki-palette.png)
+![Colors/hues available in the flexoki package.](man/figures/flexoki-palette.png)
 
 <br>
 
