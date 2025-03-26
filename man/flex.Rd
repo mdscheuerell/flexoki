@@ -4,7 +4,7 @@
 \alias{flex}
 \title{Select one or more colors from the Flexoki palette.}
 \usage{
-flex(col, sat = NULL, code = "hex", palette = flexoki)
+flex(col, sat = 400, code = "hex", palette = flexoki)
 }
 \arguments{
 \item{col}{Character string specifying one or more hues of colors (see Details).}
