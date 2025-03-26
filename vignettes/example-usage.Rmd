@@ -1,0 +1,41 @@
+---
+title: "Examples of flexoki colors in plots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Examples of flexoki colors in plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(flexoki)
+library(ggplot2)
+```
+
+```{r}
+ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
+  geom_bar( ) +
+  scale_fill_manual(values = flex(c("cyan", "red", "blue"),
+                                  c(200, 400, 600)) ) +
+  theme(legend.position = "none")
+
+ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
+  geom_bar( ) +
+  scale_fill_manual(values = flex(c("cyan", "red", "blue"), 500) ) +
+  theme(legend.position = "none")
+
+ggplot(mtcars, aes(x = as.factor(cyl), fill = as.factor(cyl) )) +  
+  geom_bar( ) +
+  scale_fill_manual(values = flex("purple", c(200, 400, 600)) ) +
+  theme(legend.position = "none")
+```
+
+
+

@@ -13,3 +13,8 @@ Depends:
     R (>= 3.5)
 Imports: 
     dplyr (>= 1.0.0),
+Suggests: 
+    knitr,
+    rmarkdown,
+    ggplot2
+VignetteBuilder: knitr
