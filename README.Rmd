@@ -1,0 +1,50 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# flexoki <img src="dev/logo.png" align="right" alt="" width="120" />
+
+This is a color palette for R based on Steph Ango's "inky color scheme" [flexoki](https://stephango.com/flexoki). According to Steph,
+
+> Flexoki is designed for reading and writing on digital screens. It is inspired by analog inks and warm shades of paper... Flexoki is minimalistic and high-contrast. The colors are calibrated for legibility and perceptual balance across devices and when switching between light and dark modes.
+
+## Installation
+
+You can install the development version of flexoki from [GitHub](https://github.com/) with:
+
+```{r}
+# install.packages("pak")
+pak::pak("mdscheuerell/flexoki")
+```
+
+## Example
+
+flexoki is designed to work with scalar or vector inputs and can provide color codes in either hexadecimal (default) or RGB formats.
+
+```{r example}
+library(flexoki)
+
+## two different colors with same saturation levels
+flex(c("blue", "red"), 100)
+
+## two different colors with same saturation levels in RGB
+flex(c("blue", "red"), 100, code = "rgb")
+
+## gray with different saturation levels
+flex("gray", c(100, 200))
+
+## three colors with specific saturation levels
+flex(c("blue", "red", "green"), c(100, 200, 300))
+```
+
