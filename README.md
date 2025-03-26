@@ -52,7 +52,7 @@ package.</figcaption>
 At present there is only one function in flexoki: `flex()`.
 
 ``` r
-flex(col, sat = NULL, code = "hex", palette = flexoki)
+flex(col, sat = 400, code = "hex", palette = flexoki)
 ```
 
 `flex()` is designed to work with scalar or vector inputs and can

@@ -49,7 +49,7 @@
 #' flex(c("blue", "red", "green"), c(100, 200, 300))
 #' #> [1] "#C6DDE8" "#F89A8A" "#A0AF54"
 #' 
-flex <- function(col, sat = NULL, code = "hex", palette = flexoki) {
+flex <- function(col, sat = 400, code = "hex", palette = flexoki) {
   
   ## possible values
   col_set <- c("paper", "base", "gray", "black",
